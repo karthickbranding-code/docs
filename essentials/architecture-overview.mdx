@@ -1,0 +1,432 @@
+---
+
+title: "Architecture Overview"
+description: "Understand the architecture, security model, and intelligence layers that power YodaEdge."
+--------------------------------------------------------------------------------------------------------
+
+# Architecture Overview
+
+## A Sovereign AI Architecture Built for Industry
+
+YodaEdge is designed as a distributed, edge-native AI operating system that enables organizations to deploy, orchestrate, secure, and govern artificial intelligence directly within their own infrastructure.
+
+Unlike cloud-centric AI platforms, YodaEdge moves intelligence closer to data sources while maintaining enterprise control over security, compliance, and operational workflows.
+
+<Note>
+YodaEdge follows an Edge-First, Cloud-Optional architecture. Data remains under organizational control while AI executes where operational decisions occur.
+</Note>
+
+---
+
+## Architectural Principles
+
+<CardGroup cols={2}>
+<Card title="Data Sovereignty" icon="shield-check">
+Enterprise data remains under organizational ownership and control.
+</Card>
+
+<Card title="Zero Trust Security" icon="lock">
+Every user, device, service, and model must be continuously verified.
+</Card>
+
+<Card title="Model Agnostic" icon="cpu">
+Deploy open-source, proprietary, or enterprise AI models without vendor lock-in.
+</Card>
+
+<Card title="Edge Native" icon="server">
+Designed for low latency, resilience, and industrial environments.
+</Card>
+</CardGroup>
+
+---
+
+## High-Level Architecture
+
+```text
+┌───────────────────────────────────────────┐
+│             User Interfaces               │
+│ CEO │ CFO │ Manager │ Operator │ Mobile   │
+└───────────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────────┐
+│                 Jedi.AI                   │
+│ Multi-Agent Intelligence & Voice Layer    │
+└───────────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────────┐
+│             YodaEdge Core OS              │
+│ AI Orchestration & Runtime Management     │
+└───────────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────────┐
+│             Orion Data Fabric             │
+│ Industrial Connectivity & Data Pipeline   │
+└───────────────────────────────────────────┘
+                    │
+                    ▼
+┌───────────────────────────────────────────┐
+│ Machines │ PLCs │ ERP │ MES │ Sensors     │
+└───────────────────────────────────────────┘
+```
+
+---
+
+## Core Platform Layers
+
+<Cards>
+
+<Card title="Orion Data Fabric" icon="database">
+Industrial data connectivity, telemetry, normalization, and governance.
+</Card>
+
+<Card title="YodaEdge Core" icon="cpu">
+AI operating layer responsible for orchestration, execution, and policy enforcement.
+</Card>
+
+<Card title="Jedi.AI" icon="sparkles">
+Enterprise intelligence platform enabling multi-agent automation and conversational AI.
+</Card>
+
+<Card title="Jedi AI Hub" icon="box">
+Marketplace for deploying verified AI models, agents, and applications.
+</Card>
+
+</Cards>
+
+---
+
+# Orion Data Fabric
+
+## Connecting Physical Operations to Digital Intelligence
+
+Orion serves as the foundational data layer responsible for integrating industrial systems with AI workloads.
+
+### Supported Connectivity
+
+<Tabs>
+
+<Tab title="Industrial">
+
+* OPC-UA
+* Modbus TCP
+* PROFINET
+* EtherNet/IP
+* CAN Bus
+
+</Tab>
+
+<Tab title="Enterprise">
+
+* SAP
+* Oracle ERP
+* Microsoft Dynamics
+* MES Platforms
+* CRM Systems
+
+</Tab>
+
+<Tab title="Streaming">
+
+* MQTT
+* Kafka
+* REST APIs
+* WebSockets
+
+</Tab>
+
+</Tabs>
+
+### Responsibilities
+
+* Device discovery
+* Telemetry collection
+* Data normalization
+* Event processing
+* Identity management
+* Secure transport
+
+---
+
+# YodaEdge Core
+
+## The AI Operating System Layer
+
+YodaEdge Core manages the execution lifecycle of AI workloads across enterprise infrastructure.
+
+### Runtime Capabilities
+
+<CardGroup cols={3}>
+<Card title="Scheduling">
+CPU, GPU, and NPU workload orchestration.
+</Card>
+
+<Card title="Deployment">
+Containerized model and service deployment.
+</Card>
+
+<Card title="Governance">
+Policy enforcement and access control.
+</Card>
+</CardGroup>
+
+### Runtime Stack
+
+```text
+Applications
+      │
+      ▼
+AI Agents
+      │
+      ▼
+Model Runtime
+(vLLM, TensorRT, ONNX)
+      │
+      ▼
+Container Runtime
+(Kubernetes / K3s)
+      │
+      ▼
+Linux Edge Platform
+```
+
+---
+
+# Jedi.AI
+
+## The Enterprise Intelligence Layer
+
+Jedi.AI transforms operational data into actionable intelligence.
+
+### Key Capabilities
+
+<Steps>
+
+<Step title="Understand">
+Collects context from machines, documents, systems, and users.
+</Step>
+
+<Step title="Reason">
+Uses AI models, agents, and enterprise knowledge to generate insights.
+</Step>
+
+<Step title="Act">
+Executes workflows, recommendations, and automated actions.
+</Step>
+
+</Steps>
+
+---
+
+## Multi-Agent Architecture
+
+```text
+CEO Assistant Agent
+        │
+Finance Agent
+        │
+Operations Agent
+        │
+Maintenance Agent
+        │
+Quality Agent
+        │
+Security Agent
+```
+
+Each agent operates under organizational policies and role-based permissions.
+
+---
+
+# Voice Intelligence Architecture
+
+## Conversational AI for Industry
+
+Voice intelligence enables users to interact naturally with enterprise systems.
+
+### Example Workflow
+
+```text
+Voice Input
+      │
+      ▼
+Speech Recognition
+      │
+      ▼
+Natural Language Understanding
+      │
+      ▼
+Agent Orchestration
+      │
+      ▼
+Enterprise Action
+      │
+      ▼
+Voice Response
+```
+
+### Use Cases
+
+* Executive briefings
+* Factory announcements
+* Maintenance guidance
+* Operational alerts
+* Incident escalation
+
+<Info>
+Voice interactions can be executed entirely on-premise to ensure privacy and regulatory compliance.
+</Info>
+
+---
+
+# Security Architecture
+
+## Security by Design
+
+Every component within YodaEdge follows Zero Trust principles.
+
+### Identity Layer
+
+* Device identity
+* User identity
+* Service identity
+* Model identity
+
+### Cryptographic Controls
+
+| Function           | Technology  |
+| ------------------ | ----------- |
+| Encryption         | AES-256-GCM |
+| Integrity          | SHA-256     |
+| Signing            | Ed25519     |
+| Key Exchange       | X25519      |
+| Transport Security | TLS 1.3     |
+
+### Security Controls
+
+<CardGroup cols={2}>
+<Card title="Secure Boot">
+Ensures trusted startup of systems and services.
+</Card>
+
+<Card title="Runtime Isolation">
+Container and workload isolation.
+</Card>
+
+<Card title="Audit Logging">
+Immutable activity records.
+</Card>
+
+<Card title="Policy Engine">
+Centralized governance and enforcement.
+</Card>
+</CardGroup>
+
+---
+
+# AI Model Layer
+
+## Model-Agnostic Architecture
+
+YodaEdge supports multiple model providers and execution environments.
+
+### Supported Models
+
+<Tabs>
+
+<Tab title="Open Models">
+
+* Llama
+* Mistral
+* DeepSeek
+* Phi
+
+</Tab>
+
+<Tab title="Enterprise Models">
+
+* Fine-tuned domain models
+* Industry-specific models
+* Internal proprietary models
+
+</Tab>
+
+</Tabs>
+
+### Inference Engines
+
+* vLLM
+* TensorRT
+* ONNX Runtime
+* Triton Inference Server
+
+---
+
+# Deployment Models
+
+<CardGroup cols={2}>
+
+<Card title="Air-Gapped">
+Fully isolated environments with no internet connectivity.
+</Card>
+
+<Card title="Private Cloud">
+Dedicated enterprise infrastructure.
+</Card>
+
+<Card title="Hybrid">
+Combination of local intelligence and cloud scalability.
+</Card>
+
+<Card title="Multi-Site Federation">
+Centralized governance across distributed facilities.
+</Card>
+
+</CardGroup>
+
+---
+
+# Why This Architecture Matters
+
+Traditional AI platforms move data to the cloud.
+
+YodaEdge moves intelligence to the data.
+
+This architectural decision delivers:
+
+* Lower latency
+* Higher security
+* Greater resilience
+* Regulatory compliance
+* Reduced operational risk
+* Complete data ownership
+
+<Note>
+YodaEdge is designed to become the foundational operating layer for Industrial AI, enabling organizations to adopt advanced intelligence without sacrificing trust, control, or security.
+</Note>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+
+<Card title="Orion Data Fabric">
+Deep dive into industrial connectivity and data pipelines.
+</Card>
+
+<Card title="YodaEdge Core">
+Explore orchestration, runtime, and governance.
+</Card>
+
+<Card title="Jedi.AI">
+Understand agents, automation, and enterprise intelligence.
+</Card>
+
+<Card title="Security Architecture">
+Review cryptographic controls and compliance frameworks.
+</Card>
+
+</CardGroup>
