@@ -3,11 +3,14 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#16A34A",
+    "primary": "#2776ea",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/favicon.svg",
+    "dark": "/favicon.svg"
+  },
   "navigation": {
     "global": {
       "anchors": [
@@ -95,14 +98,19 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/yoda_logo.png",
+    "dark": "/images/yoda_logo.png",
+    "href": "https://yodaedge.com"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@yodaedge.com"
+      },
+      {
+        "href": "https://industry-ai.com",
+        "label": "Industry AI"
       }
     ],
     "primary": {
@@ -126,8 +134,20 @@
   "footer": {
     "socials": {
       "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
+      "github": "https://github.com/karthick.branding",
       "linkedin": "https://linkedin.com/company/mintlify"
     }
+  },
+  "background": {
+    "color": {
+      "light": "#eefeff",
+      "dark": "#5a5a5a"
+    }
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "fonts": {
+    "family": "Montserrat"
   }
 }
