@@ -21,8 +21,12 @@
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "href": "https://industry-ai.com.com/blog",
+          "icon": "newspaper",
+          "color": {
+            "light": "#0e63fd",
+            "dark": "#0e63fd"
+          }
         }
       ]
     },
