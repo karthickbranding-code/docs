@@ -30,25 +30,30 @@
         }
       ]
     },
-    "products": [
+    "tabs": [
       {
-        "product": "YodaEdge",
-        "icon": "airplay-audio",
-        "color": {
-          "light": "#00a2ff",
-          "dark": "#00a2ff"
-        },
-        "description": "The Factory Intelligence",
-        "tabs": [
+        "tab": "Products",
+        "products": [
           {
-            "tab": "Guides",
-            "groups": [
+            "product": "YodaEdge",
+            "icon": "airplay-audio",
+            "color": {
+              "light": "#00a2ff",
+              "dark": "#00a2ff"
+            },
+            "description": "The Factory Intelligence",
+            "tabs": [
               {
-                "group": "Getting started",
-                "pages": [
-                  "index",
-                  "quickstart",
-                  "development"
+                "tab": "Guides",
+                "groups": [
+                  {
+                    "group": "Getting started",
+                    "pages": [
+                      "index",
+                      "quickstart",
+                      "development"
+                    ]
+                  }
                 ]
               }
             ]
